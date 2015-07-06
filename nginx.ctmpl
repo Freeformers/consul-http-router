@@ -15,7 +15,7 @@ http {
 {{range $index, $service := services}}{{range $tag, $services := service $service.Name | byTag}}{{if eq "http" $tag}}
     server {
 	listen 		80;
-	add_header Strict-Transport-Security "max-age=604800";
+	add_header Strict-Transport-Security "max-age=15638400";
 	server_name 	{{$service.Name}}.*;
 	client_max_body_size 	0;
 	
