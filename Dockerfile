@@ -1,4 +1,5 @@
 FROM debian:wheezy
+MAINTAINER Shaun Stanworth "shaun@freeformers.com"
 
 ADD backports.list /etc/apt/sources.list.d/backports.list
 RUN apt-get update && apt-get install -y --force-yes nginx -t wheezy-backports
